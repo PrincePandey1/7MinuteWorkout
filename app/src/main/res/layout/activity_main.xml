@@ -24,7 +24,7 @@
             android:layout_height="@dimen/start_button_size"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:background="@drawable/item_circular_color_accent_border"
+            android:background="@drawable/ripple_border"
             android:layout_gravity="center">
 
             <TextView
