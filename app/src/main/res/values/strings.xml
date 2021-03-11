@@ -5,4 +5,6 @@
     <string name="start">start</string>
     <string name="get_ready_for">GET READY FOR</string>
     <string name="_10">10</string>
+    <string name="_30sp">30sp</string>
+    <string name="exercise_name">Exercise Name</string>
 </resources>
