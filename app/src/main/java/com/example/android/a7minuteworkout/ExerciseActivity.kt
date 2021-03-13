@@ -16,6 +16,11 @@ class ExerciseActivity : AppCompatActivity() {
     private var exerciseTimer: CountDownTimer? = null
     private var exerciseProgress = 1
 
+
+    private var exerciseList: ArrayList<ExerciseModel>? = null
+    private var currentExercisePosition = -1
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
@@ -75,6 +80,9 @@ class ExerciseActivity : AppCompatActivity() {
             exerciseProgress = 0
         }
         setExerciseProgressBar()
+
+        tvImageView.setImageResource(exerciseList!![currentExercisePosition].getImage())
+
     }
 
     private fun setupRestView(){
@@ -83,5 +91,7 @@ class ExerciseActivity : AppCompatActivity() {
                restProgress = 0
            }
            setRestProgressBar()
+
+
        }
 }
