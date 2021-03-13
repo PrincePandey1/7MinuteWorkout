@@ -1,11 +1,10 @@
 package com.example.android.a7minuteworkout
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_exercise.*
 
 class ExerciseActivity : AppCompatActivity() {
@@ -31,7 +30,13 @@ class ExerciseActivity : AppCompatActivity() {
         toolbar_exercise_activity.setNavigationOnClickListener {
             onBackPressed()
         }
+
+
+        exerciseList = Constants.defaultExerciseList()
         setupRestView()
+
+
+
     }
 
     override fun onDestroy() {
@@ -44,30 +49,41 @@ class ExerciseActivity : AppCompatActivity() {
 
     private fun setRestProgressBar(){
         progressBar.progress = restProgress
-        restTimer = object: CountDownTimer(12000,1000){
+        restTimer = object: CountDownTimer(11000,1000){
             override fun onTick(millisUntilFinished: Long) {
                 restProgress++
-                progressBar.progress = 12-restProgress
-                tvTimer.text = (12-restProgress).toString()
+                progressBar.progress = 11-restProgress
+                tvTimer.text = (11-restProgress).toString()
+
             }
 
             override fun onFinish() {
+                currentExercisePosition++
                setupExerciseView()
             }
         }.start()
+
     }
 
     private fun setExerciseProgressBar(){
         tvExerciseProgressBar.progress = exerciseProgress
-        exerciseTimer = object: CountDownTimer(32000,1000){
+        exerciseTimer = object: CountDownTimer(31000,1000){
             override fun onTick(millisUntilFinished: Long) {
                 exerciseProgress++
-                tvExerciseProgressBar.progress = 32-exerciseProgress
-                tvExerciseTimer.text = (32-exerciseProgress).toString()
+                tvExerciseProgressBar.progress = 31-exerciseProgress
+                tvExerciseTimer.text = (31-exerciseProgress).toString()
             }
 
             override fun onFinish() {
-                     Toast.makeText(this@ExerciseActivity,"Let's Start",Toast.LENGTH_SHORT).show()
+                if(currentExercisePosition < exerciseList!!.size -1) {
+                    setupRestView()
+                }
+               else {
+                    Toast.makeText(this@ExerciseActivity,
+                            "Congratulations You have completed 7 Minute Workout",
+                            Toast.LENGTH_SHORT).show()
+                }
+
             }
         }.start()
     }
@@ -82,16 +98,25 @@ class ExerciseActivity : AppCompatActivity() {
         setExerciseProgressBar()
 
         tvImageView.setImageResource(exerciseList!![currentExercisePosition].getImage())
+        tv_exercise_name.text = exerciseList!![currentExercisePosition].getName()
 
     }
 
     private fun setupRestView(){
+
+        llRestView.visibility = View.VISIBLE
+        llExerciseView.visibility = View.GONE
+
+
+
            if(restTimer != null){
                restTimer!!.cancel()
                restProgress = 0
            }
            setRestProgressBar()
 
-
+        tvUpcomingExerciseName.text = exerciseList!![currentExercisePosition+1].getName()
        }
 }
+
+

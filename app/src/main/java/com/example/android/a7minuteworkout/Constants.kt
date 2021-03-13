@@ -2,15 +2,15 @@ package com.example.android.a7minuteworkout
 
 class Constants {
 
-    companion object{
-        fun defaultExerciseList() {
+    companion object {
+        fun defaultExerciseList():ArrayList<ExerciseModel> {
             val exerciseList = ArrayList<ExerciseModel>()
 
             val jumpingJacks = ExerciseModel(1,
-            "JumpingJacks",
-            R.drawable.ic_jumping_jack,
-            false,
-            false)
+                    "Jumping Jack",
+                    R.drawable.ic_jumping_jack,
+                    false,
+                    false)
             exerciseList.add(jumpingJacks)
 
             val wallSit = ExerciseModel(2,
@@ -21,25 +21,28 @@ class Constants {
             exerciseList.add(wallSit)
 
             val pushUps = ExerciseModel(3,
-                    "PushUps",
+                    "PushUp",
                     R.drawable.ic_push_ups,
                     false,
                     false)
             exerciseList.add(pushUps)
 
             val pullUps = ExerciseModel(4,
-                    "pullUps",
-                    R.drawable.ic_pull_Ups,
+                    "PullUp",
+                    R.drawable.ic_pull_ups,
                     false,
                     false)
             exerciseList.add(pullUps)
 
-            val plank = ExerciseModel(4,
-                    "StepUps",
+            val plank = ExerciseModel(5,
+                    "Plank",
                     R.drawable.ic_plank,
-                    false,
-                    false)
+                   false ,
+                false)
             exerciseList.add(plank)
+
+            return exerciseList
         }
+
     }
 }
