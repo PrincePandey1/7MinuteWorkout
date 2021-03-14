@@ -25,7 +25,9 @@
             android:layout_marginTop="40dp"
             android:gravity="center"
             android:background="@drawable/ripple_border"
-            android:layout_gravity="center">
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:focusable="true">
 
             <TextView
 
