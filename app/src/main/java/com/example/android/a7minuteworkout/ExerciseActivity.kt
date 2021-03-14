@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_exercise.*
 import java.lang.Exception
 import java.util.*
@@ -30,12 +31,15 @@ class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener {
 
     private var player: MediaPlayer? = null
 
+    private var exerciseAdapter: ExerciseStatusAdapter? = null
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
+
+
 
         setSupportActionBar(toolbar_exercise_activity)
 
@@ -49,7 +53,7 @@ class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener {
         exerciseList = Constants.defaultExerciseList()
         setupRestView()
 
-
+          setupExerciseStatus()
 
     }
 
@@ -169,6 +173,14 @@ class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener {
 
     }
 
+    private fun setupExerciseStatus(){
+        rvExerciseStatus.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,
+                false)
+
+        exerciseAdapter = ExerciseStatusAdapter(exerciseList!!,this)
+        rvExerciseStatus.adapter = exerciseAdapter
+
+    }
 
 
 
