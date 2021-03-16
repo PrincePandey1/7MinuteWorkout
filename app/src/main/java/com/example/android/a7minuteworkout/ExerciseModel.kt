@@ -6,7 +6,7 @@ data class ExerciseModel(
         private var name:String,
         private var image: Int,
         private var isCompleted: Boolean,
-        private var isSelected: Boolean
+        var isSelected: Boolean
         ){
 
         fun getId(): Int{
@@ -27,5 +27,17 @@ data class ExerciseModel(
         }
         fun setImage(image: Int){
                 this.image = image
+        }
+        fun getIsSelected(): Boolean{
+                return isSelected
+        }
+        fun getIsCompleted(): Boolean{
+                return isCompleted
+        }
+        fun setIsSelected(isSelected: Boolean){
+                this.isSelected = isSelected
+        }
+        fun setIsCompleted(isCompleted: Boolean){
+                this.isCompleted = isCompleted
         }
 }

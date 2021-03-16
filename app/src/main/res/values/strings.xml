@@ -9,4 +9,8 @@
     <string name="exercise_name">Exercise Name</string>
     <string name="upcoming_exercise_is">Upcoming exercise is..</string>
     <string name="jumping_jack">Jumping Jack</string>
+    <string name="end">END</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="you_have_finished_the_workout">You have finished the workout!</string>
+    <string name="finish">FINISH</string>
 </resources>
