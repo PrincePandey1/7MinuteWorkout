@@ -39,6 +39,43 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="30sp" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llBMI"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/item_circular_design"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bmi"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculator"
+                android:layout_marginTop="5dp"
+                android:textSize="22sp"
+                android:textColor="@color/colorAssent"
+                android:textStyle="bold"/>
+
         </LinearLayout>
 
     </LinearLayout>
