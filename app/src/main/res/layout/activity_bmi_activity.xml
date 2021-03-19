@@ -94,13 +94,73 @@
                 android:inputType="numberDecimal"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUsUnitWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsUnitWeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/weight_in_kg"
+                android:textSize="16sp"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/llUsUnitHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilUsUnitHeightFeet"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsUnitHeightFeet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/feet"
+                android:textSize="16sp"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilUsUnitHeightInch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsUnitHeightInch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Inch"
+                    android:textSize="16sp"
+                    android:inputType="number"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
         <LinearLayout
             android:id="@+id/llDisplayBMIResult"
             android:layout_width="match_parent"
             android:layout_marginTop="30dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:visibility="visible"
+            android:visibility="invisible"
             tools:visibility="visible">
 
             <TextView
@@ -109,8 +169,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/your_bmi"
-                android:textSize="16sp"
-                android:visibility="invisible" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvBMIValue"
@@ -120,8 +179,7 @@
                 android:gravity="center"
                 android:text="@string/_15_00"
                 android:textStyle="bold"
-                android:textSize="18sp"
-                android:visibility="invisible" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tvBMIType"
@@ -129,7 +187,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:text="@string/condition"
-                android:visibility="invisible"
                 android:gravity="center"
                 android:textSize="18sp" />
 

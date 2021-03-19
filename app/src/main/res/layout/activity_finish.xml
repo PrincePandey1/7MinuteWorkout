@@ -41,7 +41,7 @@
             android:layout_height="60dp"
             android:contentDescription="@string/image"
             android:background="@color/white"
-            android:src="@drawable/ic_action_name" />
+            android:src="@drawable/ic_history_icon" />
 
     </LinearLayout>
 
