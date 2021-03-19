@@ -12,14 +12,16 @@
         <activity
             android:name=".bmi_activity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            >
+            android:theme="@style/NoActionBarTheme">
 
         </activity>
+
         <activity
             android:name=".FinishActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
         <activity
             android:name=".ExerciseActivity"
             android:screenOrientation="portrait"
