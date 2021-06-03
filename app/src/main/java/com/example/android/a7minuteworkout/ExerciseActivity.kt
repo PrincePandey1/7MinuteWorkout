@@ -8,6 +8,7 @@ import android.os.CountDownTimer
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
+import android.view.WindowManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -42,6 +43,10 @@ class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercise)
 
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        )
 
 
         setSupportActionBar(toolbar_exercise_activity)
@@ -142,7 +147,8 @@ class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener {
         speakOut(exerciseList!![currentExercisePosition].getName())
         setExerciseProgressBar()
 
-        tvImageView.setImageResource(exerciseList!![currentExercisePosition].getImage())
+        tvImageView.setImageResource(exerciseList!![currentExercisePosition].getImage
+            ())
         tv_exercise_name.text = exerciseList!![currentExercisePosition].getName()
 
     }

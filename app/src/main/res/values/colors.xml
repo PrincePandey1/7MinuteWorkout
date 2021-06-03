@@ -10,9 +10,10 @@
 
     <color name="colorPrimary">#B2212121</color>
     <color name="colorPrimaryDark">#B2212121</color>
-    <color name="colorAssent">#0D0D7B</color>
+    <color name="colorAssent">#0D0D7B</color>                      #21618C
 
     <color name="colorWhite">#FFFFFF</color>
     <color name="toolbar_color_control">#FFFFFF</color>
     <color name="colorHighLighted">#C4C4C4</color>
+    <color name="backgroundColor"> #21618C</color>
 </resources>

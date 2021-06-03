@@ -3,6 +3,7 @@ package com.example.android.a7minuteworkout
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_bmi_activity.*
 import java.math.BigDecimal
@@ -15,11 +16,16 @@ class bmi_activity : AppCompatActivity() {
 
     var currentVisibleView: String = "METRIC_UNIT_VIEW"
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmi_activity)
-        
-        
+
+        window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+        )
+
         setSupportActionBar(toolbar_bmi_activity)
 
         val actionbar = supportActionBar

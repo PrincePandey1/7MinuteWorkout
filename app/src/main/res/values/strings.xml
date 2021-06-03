@@ -26,4 +26,6 @@
     <string name="condition">Condition</string>
     <string name="feet">feet</string>
     <string name="history_image">history_image</string>
+    <string name="exercise_completed">EXERCISE COMPLETED</string>
+    <string name="no_data_available">NO DATA AVAILABLE</string>
 </resources>

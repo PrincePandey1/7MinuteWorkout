@@ -9,23 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.7MinuteWorkout">
-        <activity android:name=".HistoryActivity"
+        <activity android:name=".SplashScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/NoActionBarTheme">
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".bmi_activity"
             android:screenOrientation="portrait"
             android:theme="@style/NoActionBarTheme">
-        </activity>
 
+        </activity>
         <activity
             android:name=".FinishActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        </activity>
 
+        </activity>
         <activity
             android:name=".ExerciseActivity"
             android:screenOrientation="portrait"
@@ -33,11 +38,7 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
