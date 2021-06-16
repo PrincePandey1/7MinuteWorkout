@@ -1,12 +1,10 @@
-package com.example.android.a7minuteworkout
+package com.example.android.a7minuteworkout.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowManager
+import com.example.android.a7minuteworkout.R
 import kotlinx.android.synthetic.main.activity_finish.*
-import java.text.SimpleDateFormat
-import java.util.*
 
 class FinishActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

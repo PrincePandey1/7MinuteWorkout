@@ -16,4 +16,6 @@
     <color name="toolbar_color_control">#FFFFFF</color>
     <color name="colorHighLighted">#C4C4C4</color>
     <color name="backgroundColor"> #21618C</color>
+
+    <color name="light_gray">#9E9E9E</color>
 </resources>

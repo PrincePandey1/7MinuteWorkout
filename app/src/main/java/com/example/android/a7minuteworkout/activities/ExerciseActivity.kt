@@ -1,4 +1,4 @@
-package com.example.android.a7minuteworkout
+package com.example.android.a7minuteworkout.activities
 
 import android.app.Dialog
 import android.content.Intent
@@ -9,10 +9,9 @@ import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.android.a7minuteworkout.R
 import kotlinx.android.synthetic.main.activity_exercise.*
 import kotlinx.android.synthetic.main.custom_dialogue.*
 import java.lang.Exception
@@ -128,7 +127,7 @@ class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener {
                 }
                else {
                    finish()
-                    val intent = Intent(this@ExerciseActivity,FinishActivity::class.java)
+                    val intent = Intent(this@ExerciseActivity, FinishActivity::class.java)
                     startActivity(intent)
                 }
 
@@ -155,7 +154,7 @@ class ExerciseActivity : AppCompatActivity() , TextToSpeech.OnInitListener {
 
     private fun setupRestView(){
         try {
-            player = MediaPlayer.create(applicationContext,R.raw.audio)
+            player = MediaPlayer.create(applicationContext, R.raw.audio)
             player!!.isLooping = false
             player!!.start()
         }catch (e: Exception){

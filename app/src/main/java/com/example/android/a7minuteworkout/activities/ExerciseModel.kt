@@ -1,4 +1,4 @@
-package com.example.android.a7minuteworkout
+package com.example.android.a7minuteworkout.activities
 
 data class ExerciseModel(
 

@@ -28,4 +28,8 @@
     <string name="history_image">history_image</string>
     <string name="exercise_completed">EXERCISE COMPLETED</string>
     <string name="no_data_available">NO DATA AVAILABLE</string>
+    <string name="_7minuteworkout">7MinuteWorkout</string>
+    <string name="take_first_steps_towards_your_fitness_journey">Take first step towards your fitness journey..</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
 </resources>

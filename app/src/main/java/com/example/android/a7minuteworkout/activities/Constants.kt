@@ -1,4 +1,6 @@
-package com.example.android.a7minuteworkout
+package com.example.android.a7minuteworkout.activities
+
+import com.example.android.a7minuteworkout.R
 
 class Constants {
 
