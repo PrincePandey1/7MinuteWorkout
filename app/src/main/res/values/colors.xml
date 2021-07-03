@@ -18,4 +18,5 @@
     <color name="backgroundColor"> #21618C</color>
 
     <color name="light_gray">#9E9E9E</color>
+    <color name="snackbar_error_color">#F72400</color>
 </resources>

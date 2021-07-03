@@ -6,8 +6,10 @@
         android:angle="360"
         android:type="linear"
         android:startColor="@color/colorAssent"
-        android:endColor="@color/white"
-        android:centerColor="@color/backgroundColor" />
+        android:endColor="@color/purple_200"
+        android:centerColor="@color/backgroundColor"
+
+        />
 
     <corners
         android:radius="10dp" />

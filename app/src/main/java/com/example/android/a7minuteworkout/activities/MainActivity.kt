@@ -7,7 +7,7 @@ import android.view.WindowManager
 import com.example.android.a7minuteworkout.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         llBMI.setOnClickListener {
-            val intent = Intent(this, bmi_activity::class.java)
+            val intent = Intent(this, BmiActivity::class.java)
             startActivity(intent)
         }
 

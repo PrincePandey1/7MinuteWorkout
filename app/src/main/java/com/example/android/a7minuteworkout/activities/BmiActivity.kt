@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_bmi_activity.*
 import java.math.BigDecimal
 import java.math.RoundingMode
 
-class bmi_activity : AppCompatActivity() {
+class BmiActivity : AppCompatActivity() {
 
       val METRIC_UNITS_VIEW = "METRIC_UNIT_VIEW"
       val US_UNITS_VIEW = "US_UNIT_VIEW"
@@ -47,7 +47,7 @@ class bmi_activity : AppCompatActivity() {
                 displayBMIResult(bmi)
 
             }else{
-                Toast.makeText(this@bmi_activity , "Please enter valid values." , Toast.LENGTH_LONG).show()
+                Toast.makeText(this , "Please enter valid values." , Toast.LENGTH_LONG).show()
             }
         }
         btnCalculateUnits.setOnClickListener{
@@ -61,7 +61,7 @@ class bmi_activity : AppCompatActivity() {
                     displayBMIResult(bmi)
 
                 }else{
-                    Toast.makeText(this@bmi_activity ,
+                    Toast.makeText(this ,
                             "Please enter valid values." ,
                             Toast.LENGTH_LONG).show()
                 }
@@ -76,7 +76,7 @@ class bmi_activity : AppCompatActivity() {
                     val bmi = 703 * (usUnitWeightValue / (heightValue * heightValue))
                     displayBMIResult(bmi)
                 }else{
-                    Toast.makeText(this@bmi_activity ,
+                    Toast.makeText(this ,
                             "Please enter valid values." ,
                             Toast.LENGTH_LONG).show()
                 }
