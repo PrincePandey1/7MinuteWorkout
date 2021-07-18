@@ -21,11 +21,11 @@ class SplashScreen : AppCompatActivity() {
         Handler().postDelayed({
             var currentUserID = FireStoreClass().getCurrentUserId()
             if (currentUserID.isNotEmpty()){
-                startActivity(Intent(this,MainActivity::class.java))
-            }else{
-                startActivity(Intent(this, IntroActivity::class.java))
-            }
-            finish()
+               startActivity(Intent(this,MainActivity::class.java))
+           }else{
+              startActivity(Intent(this, IntroActivity::class.java))
+           }
+          finish()
         },2500)
     }
 }

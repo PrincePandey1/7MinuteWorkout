@@ -22,6 +22,37 @@ class FireStoreClass {
             }
     }
 
+    fun loadUserData(activity: Activity){
+
+        mFireStore.collection(Constant.USERS)
+            .document(getCurrentUserId())
+            .get()
+            .addOnSuccessListener { document ->
+                val loggedInUser = document.toObject(User::class.java)
+
+                when(activity){
+                    is SignInActivity ->{
+                        activity.signInSuccess(loggedInUser)
+                    }
+
+
+                }
+
+            }.addOnFailureListener {
+                    e->
+                when(activity){
+                    is SignInActivity ->{
+                        activity.hideProgressDialog()
+                    }
+
+
+                }
+
+                Log.e("SignInSuccess","Something went Wrong")
+            }
+    }
+
+
     fun getCurrentUserId(): String {
         //  return FirebaseAuth.getInstance().currentUser!!.uid
         // In Alternative we check whether the Current User is empty or not
@@ -33,37 +64,6 @@ class FireStoreClass {
         return currentUserID
     }
 
-    fun loadUserData(activity: Activity){
-
-        mFireStore.collection(Constant.USERS)
-            .document(getCurrentUserId())
-            .get()
-            .addOnSuccessListener { document ->
-                val loggedInUser = document.toObject(User::class.java)
-
-                when(activity){
-                    is SignIn ->{
-                        activity.signInSuccess(loggedInUser)
-                    }
-
-
-                }
-
-            }.addOnFailureListener {
-                    e->
-                when(activity){
-                    is SignIn ->{
-                        activity.hideProgressDialog()
-                    }
-                    is MainActivity ->{
-                       activity.hideProgressDialog()
-                    }
-
-                }
-
-                Log.e("SignInSuccess","Something went Wrong")
-            }
-    }
-
+   
 
 }

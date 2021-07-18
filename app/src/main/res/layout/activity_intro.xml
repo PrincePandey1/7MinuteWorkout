@@ -57,7 +57,7 @@
         android:background="@drawable/shade" />
 
     <Button
-        android:id="@+id/btn_SignIn_intro"
+        android:id="@+id/btn_SignIn_Intro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"

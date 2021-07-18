@@ -21,8 +21,8 @@ class SignUp : BaseActivity() {
 
     }
     private fun registerUser(){   // It trims the excessive space enter by the user in email,name & password
-        val name: String = et_name.text.toString().trim{ it <= ' '}
-        val email: String = et_email.text.toString().trim{ it <= ' '}
+        val name: String = et_name_sign_up.text.toString().trim{ it <= ' '}
+        val email: String = et_email_sign_up.text.toString().trim{ it <= ' '}
         val password: String = et_password_signUp.text.toString().trim{ it <= ' '}
 
         if (validateForm(name, email, password)){

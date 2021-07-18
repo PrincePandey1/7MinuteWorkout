@@ -9,8 +9,9 @@ import android.widget.Toast
 import com.example.android.a7minuteworkout.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_in.*
+import kotlinx.android.synthetic.main.activity_sign_up.*
 
-class SignIn : BaseActivity() {
+class SignInActivity : BaseActivity() {
 
     private  lateinit var auth: FirebaseAuth
 
@@ -18,6 +19,7 @@ class SignIn : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
+       // setUpActionBar()
         auth = FirebaseAuth.getInstance()
 
         btn_sign_in.setOnClickListener {
@@ -26,9 +28,25 @@ class SignIn : BaseActivity() {
 
     }
 
+
+
+   /* private fun setupActionBar() {
+        setSupportActionBar(toolbar_sign_in_activity)
+
+        val actionBar = supportActionBar
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_back)
+        }
+        toolbar_sign_up_activity.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
+    }*/
+
     private fun signInRegisteredUser(){
-        val email: String = et_email_SignIn.text.toString().trim { it <= ' ' }
-        val password: String = et_password_SignIn.text.toString().trim { it <= ' ' }
+        val email: String = et_email_signin.text.toString().trim { it <= ' ' }
+        val password: String = et_password_signin.text.toString().trim { it <= ' ' }
 
         if (validateForm(email, password)){
             showProgressDialog("please wait")
@@ -49,9 +67,9 @@ class SignIn : BaseActivity() {
 
                     }
                 }
+
         }
     }
-
     private fun validateForm( email: String, password:String): Boolean {
 
         return when {
@@ -75,6 +93,4 @@ class SignIn : BaseActivity() {
         finish()
 
     }
-
-
 }
