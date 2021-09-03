@@ -24,7 +24,8 @@
                 android:id="@+id/toolbar_Main_activity"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/colorAssent"
+                app:title="@string/_7minuteworkout"
+                android:background="@color/colorP"
                 app:popupTheme="@style/AppTheme.PopOverlay">
 
             </androidx.appcompat.widget.Toolbar>

@@ -55,5 +55,6 @@ class MainActivity : BaseActivity() {
 
     private fun setupActionBar(){
         setSupportActionBar(toolbar_Main_activity)
+
     }
 }

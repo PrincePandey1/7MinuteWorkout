@@ -19,4 +19,7 @@
 
     <color name="light_gray">#9E9E9E</color>
     <color name="snackbar_error_color">#F72400</color>
+
+    <color name="colorP">#001834</color>
+    <color name="colorPr">#0F2E71</color>
 </resources>
